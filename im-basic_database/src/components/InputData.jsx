@@ -13,25 +13,33 @@ function InputData() {
     
     function handleSubmit(e) { 
         e.preventDefault();     
-        alert(`Thank you ${fname}!`);
 
-        /*
-        fetch("http://localhost/cv-api/process.php", { 
+        const data = {
+            city: "CagayanDeOro",
+            department_name: "IT Department",
+            employees: [
+                {
+                    id: Date.now(),
+                    first_name: fname,
+                    last_name: lname,
+                    hire_date: hdate,
+                    job_title: jtitle,
+                    salary: Number(salary)
+                }
+            ]
+        }
+
+        fetch("http://localhost/im-api/insertdata.php", { 
             method: "POST", 
             headers: { 
                 "Content-Type": "application/json" 
             }, 
-            body: JSON.stringify({ name: name }) 
+            body: JSON.stringify(data) 
         }) 
         .then(res => res.json()) 
         .then(data => { 
-            if (data.message) { 
-                alert(data.message); 
-            } else { 
-            alert("Unexpected error occurred."); 
-            } 
+            alert(data.message || "Employee Saved!");
         }); 
-        */
     }     
 
 
@@ -84,3 +92,14 @@ function InputData() {
 }
 
 export default InputData;
+
+
+/*
+Create database in phpmyadmin
+CREATE TABLE departments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  city VARCHAR(100),
+  department_name VARCHAR(100),
+  employees JSON
+);
+*/

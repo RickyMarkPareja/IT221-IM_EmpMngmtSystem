@@ -13,8 +13,9 @@ function App() {
         <InputData />
         <RetrieveData />
 
-        <footer>
-        <p style={{textAlign: "center"}}>* This only reflects the basic functionality of the system and is not in any way the final product! ^w^ *</p>
+      <footer>
+        <p style={{textAlign: "center"}}>
+          * This only reflects the basic functionality of the system and is not in any way the final product! ^w^ *</p>
       </footer>
     </div>
   );

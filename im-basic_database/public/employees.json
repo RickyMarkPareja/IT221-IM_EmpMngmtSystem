@@ -1,0 +1,17 @@
+
+
+{
+    "IT Department": {
+        "city": "CagayanDeOro",
+        "employees": [
+            {
+                "id": 1,
+                "first_name": "Murdoch",
+                "last_name": "Byrnes",
+                "hire_date": "1915-11-10",
+                "job_title": "Cashier",
+                "salary": 15000
+            }
+        ]
+    }
+}
